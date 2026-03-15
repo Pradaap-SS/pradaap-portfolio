@@ -8,7 +8,6 @@ import { profile } from '~/data/profile'
       <span>© 2026 {{ profile.name }}. All rights reserved.</span>
       <div class="flex flex-wrap items-center gap-4">
         <NuxtLink to="/projects" class="hover:text-brand-500">Projects</NuxtLink>
-        <!-- <NuxtLink to="/blog" class="hover:text-brand-500">Blog</NuxtLink> -->
         <NuxtLink to="/publications" class="hover:text-brand-500">Publications</NuxtLink>
         <a class="hover:text-brand-500" :href="`mailto:${profile.email}`">{{ profile.email }}</a>
       </div>

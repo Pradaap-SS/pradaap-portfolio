@@ -43,7 +43,7 @@ npm run build
 ├── data/
 │   ├── profile.ts   # Personal profile, experience, skills, education
 │   ├── projects.ts  # Project list + project detail content
-│   └── blog.ts      # Blog post data
+│   └── publications.ts # Publication list + detail content
 ├── layouts/
 │   └── default.vue
 ├── pages/
@@ -53,7 +53,7 @@ npm run build
 │   ├── projects/
 │   │   ├── index.vue
 │   │   └── [slug].vue
-│   └── blog/
+│   └── publications/
 │       ├── index.vue
 │       └── [slug].vue
 └── public/
@@ -79,8 +79,8 @@ npm run build
   - `data/profile.ts`
 - Project cards and project detail pages:
   - `data/projects.ts`
-- Blog listing and blog details:
-  - `data/blog.ts`
+- Publications listing and details:
+  - `data/publications.ts`
 
 ## Common Updates
 
