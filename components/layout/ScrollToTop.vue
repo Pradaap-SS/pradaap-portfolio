@@ -23,7 +23,7 @@ const scrollToTop = () => {
   <button
     v-show="visible"
     type="button"
-    class="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-500 text-white shadow-soft transition hover:-translate-y-1"
+    class="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-brand-600 to-secondary-500 text-white shadow-[0_12px_40px_-24px_rgba(36,95,95,0.78)] transition-all duration-300 surface-elevate"
     aria-label="Scroll to top"
     @click="scrollToTop"
   >

@@ -24,12 +24,12 @@ useSeoMeta({
   <div class="space-y-12">
     <SectionTitle title="Projects" subtitle="" />
 
-    <div class="flex flex-wrap gap-2">
+    <div class="chip-group">
       <button
         v-for="filter in allFilters"
         :key="filter"
         type="button"
-        class="chip transition"
+        class="chip transition hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-100"
         :class="
           activeFilter === filter
             ? 'border-brand-500 bg-brand-50 text-brand-600 dark:bg-slate-800'
@@ -42,7 +42,12 @@ useSeoMeta({
     </div>
 
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <ProjectCard v-for="project in filteredProjects" :key="project.slug" :project="project" />
+      <ProjectCard
+        v-for="(project, index) in filteredProjects"
+        :key="project.slug"
+        :project="project"
+        :style="{ '--reveal-delay': `${120 + index * 90}ms` }"
+      />
     </div>
   </div>
 </template>

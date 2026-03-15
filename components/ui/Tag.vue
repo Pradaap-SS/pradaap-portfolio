@@ -3,5 +3,5 @@ defineProps<{ label: string }>()
 </script>
 
 <template>
-  <span class="chip">{{ label }}</span>
+  <span class="chip max-w-full truncate">{{ label }}</span>
 </template>

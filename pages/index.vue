@@ -27,7 +27,12 @@ useSeoMeta({
         subtitle="Backend and distributed systems case studies with architecture and measurable impact."
       />
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <ProjectCard v-for="project in featuredProjects" :key="project.slug" :project="project" />
+        <ProjectCard
+          v-for="(project, index) in featuredProjects"
+          :key="project.slug"
+          :project="project"
+          :style="{ '--reveal-delay': `${140 + index * 120}ms` }"
+        />
       </div>
       <NuxtLink to="/projects" class="btn-secondary w-fit">View All Projects</NuxtLink>
     </section>
@@ -37,14 +42,14 @@ useSeoMeta({
         <SectionTitle
           title="About Me"
         />
-        <p class="text-slate-600 dark:text-slate-300">
+        <p class="section-lead max-w-3xl">
           {{ profile.homepageSummary }}
         </p>
         <NuxtLink to="/about" class="btn-primary w-fit">More About Me</NuxtLink>
       </div>
       <div class="card space-y-4">
         <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Core Stack</p>
-        <div class="flex flex-wrap gap-2">
+        <div class="chip-group">
           <Tag v-for="skill in featuredSkills" :key="skill" :label="skill" />
         </div>
       </div>

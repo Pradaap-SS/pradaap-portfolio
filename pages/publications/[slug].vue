@@ -18,18 +18,20 @@ useSeoMeta({
 <template>
   <article v-if="publication" class="space-y-8">
     <header class="space-y-4">
-      <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Publication</p>
-      <h1 class="font-display text-4xl font-semibold">{{ publication.title }}</h1>
-      <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
-        <span>{{ new Date(publication.date).toLocaleDateString() }}</span>
+      <p class="section-kicker">Publication</p>
+      <h1 class="section-title text-slate-900 dark:text-white">{{ publication.title }}</h1>
+      <div class="chip-group">
+        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ new Date(publication.date).toLocaleDateString() }}</span>
         <span v-if="publication.venue" class="chip">{{ publication.venue }}</span>
-        <div class="flex flex-wrap gap-2">
+        <div class="chip-group">
           <Tag v-for="tag in publication.tags" :key="tag" :label="tag" />
         </div>
       </div>
     </header>
 
-    <div class="prose max-w-none dark:prose-invert" v-html="publication.content"></div>
+    <section class="card card-reveal">
+      <div class="prose max-w-none dark:prose-invert" v-html="publication.content"></div>
+    </section>
 
     <NuxtLink to="/publications" class="btn-secondary w-fit">Back to Publications</NuxtLink>
   </article>

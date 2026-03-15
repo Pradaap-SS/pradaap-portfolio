@@ -16,9 +16,10 @@ useSeoMeta({
     <SectionTitle title="Publications" subtitle="Research papers, technical publications, and write-ups." />
     <div v-if="sortedPublications.length" class="grid gap-6">
       <PublicationCard
-        v-for="publication in sortedPublications"
+        v-for="(publication, index) in sortedPublications"
         :key="publication.slug"
         :publication="publication"
+        :style="{ '--reveal-delay': `${140 + index * 90}ms` }"
       />
     </div>
     <div v-else class="card text-slate-600 dark:text-slate-300">

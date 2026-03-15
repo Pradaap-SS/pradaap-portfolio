@@ -39,36 +39,36 @@ useSeoMeta({
 
 <template>
   <div class="space-y-12">
-    <SectionTitle title="Contact" />
+    <SectionTitle title="Contact" subtitle="I'm actively exploring backend and AI-enabled product opportunities." />
 
     <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-      <form class="card space-y-4" @submit.prevent="submitForm">
+      <form class="card space-y-5" @submit.prevent="submitForm">
         <div>
-          <label class="text-sm font-medium">Name</label>
+          <label class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Name</label>
           <input
             v-model="form.name"
             type="text"
-            class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-brand-500 dark:border-slate-800 dark:bg-slate-900"
+            class="input-control mt-2"
             placeholder="Your name"
           />
           <p v-if="errors.name" class="mt-1 text-xs text-rose-500">{{ errors.name }}</p>
         </div>
         <div>
-          <label class="text-sm font-medium">Email</label>
+          <label class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Email</label>
           <input
             v-model="form.email"
             type="email"
-            class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-brand-500 dark:border-slate-800 dark:bg-slate-900"
+            class="input-control mt-2"
             placeholder="you@email.com"
           />
           <p v-if="errors.email" class="mt-1 text-xs text-rose-500">{{ errors.email }}</p>
         </div>
         <div>
-          <label class="text-sm font-medium">Message</label>
+          <label class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Message</label>
           <textarea
             v-model="form.message"
             rows="4"
-            class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-brand-500 dark:border-slate-800 dark:bg-slate-900"
+            class="input-control mt-2"
             placeholder="Tell me about the role or project."
           ></textarea>
           <p v-if="errors.message" class="mt-1 text-xs text-rose-500">{{ errors.message }}</p>
@@ -78,23 +78,23 @@ useSeoMeta({
 
       <div class="card space-y-4">
         <h3 class="font-display text-2xl font-semibold">Connect</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300">
+        <p class="text-sm leading-7 text-slate-600 dark:text-slate-300">
           Reach out via LinkedIn or email.
-          </p>
-          <div class="space-y-3 text-sm">
+        </p>
+        <div class="space-y-3 text-sm">
           <a class="flex items-center gap-2 hover:text-brand-500" :href="profile.linkedin" target="_blank" rel="noopener">
-              LinkedIn
-            </a>
+            LinkedIn
+          </a>
           <a class="flex items-center gap-2 hover:text-brand-500" :href="`mailto:${profile.email}`">
-              {{ profile.email }}
-            </a>
-          </div>
+            {{ profile.email }}
+          </a>
         </div>
+      </div>
     </div>
 
     <div
       v-if="showToast"
-      class="fixed right-6 top-6 z-50 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white shadow-soft"
+      class="fixed right-6 top-6 z-50 rounded-full bg-gradient-to-r from-accent-500 to-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-soft"
     >
       Message sent. I will reply soon.
     </div>

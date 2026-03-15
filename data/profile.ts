@@ -33,7 +33,7 @@ export const profile = {
   recruiterHeadline: [
     'Builds modern full-stack products end-to-end, from responsive frontend experiences to scalable backend and distributed services.',
     'Applies AI to product capabilities (automation, intelligent workflows, document processing) and to faster development execution.',
-    'Delivered measurable impact: 15% lower API latency, 20% fewer production incidents, 30% faster database queries via indexing, and 80% reduction in manual AP/AR effort.'
+    'Delivered measurable impact: 15% lower API latency, 20% fewer production incidents, 30% faster database queries via indexing, and 80% reduction in manual effort.'
   ],
 } as const
 
@@ -114,7 +114,7 @@ export const education: EducationItem[] = [
     location: 'Chicago, Illinois, USA'
   },
   {
-    degree: 'Bachelor of Engineering (Computer Science)',
+    degree: 'Bachelor of Engineering - Computer Science',
     institution: 'Visvesvaraya Technological University',
     location: 'Bengaluru, Karnataka, India'
   }

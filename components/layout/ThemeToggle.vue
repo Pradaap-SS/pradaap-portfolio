@@ -5,7 +5,8 @@ const { theme, toggleTheme } = useTheme()
 <template>
   <button
     type="button"
-    class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/60 bg-white/80 text-slate-700 transition hover:border-brand-500 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100"
+    class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/70 bg-white/85 text-slate-700 transition-all duration-300 hover:border-brand-500 hover:scale-[1.02] hover:text-brand-600 dark:border-slate-700/80 dark:bg-slate-900/80 dark:text-slate-100 dark:hover:text-brand-300"
+    :aria-pressed="theme === 'dark'"
     aria-label="Toggle theme"
     @click="toggleTheme"
   >
