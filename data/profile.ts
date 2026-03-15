@@ -45,10 +45,10 @@ export const aboutParagraphs: string[] = [
 
 export const skillsByCategory = {
   Languages: ['TypeScript', 'JavaScript', 'Python', 'Java', 'C++'],
-  Frontend: ['Nuxt.js', 'Next.js', 'Vue','React', 'Angular', 'HTML5', 'CSS3', 'PHP', 'Bootstrap'],
-  Backend: ['Node.js', 'REST APIs', 'Microservices', 'Express', 'Spring Boot', 'Flask', 'Django', 'Kafka', 'Cerner CCL'],
-  Cloud: ['AWS (S3, RDS, VPC, EC2)', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform'],
   Databases: ['MongoDB', 'SQL', 'Oracle', 'SQL Server', 'DynamoDB', 'Elasticsearch', 'Teradata'],
+  'Full Stack (Frontend, Backend)': ['Nuxt.js', 'Next.js', 'Vue', 'React', 'Angular', 'Node.js', 'REST APIs', 'Microservices', 'Express', 'Spring Boot', 'Flask', 'Django', 'Kafka', 'Cerner CCL'],
+  'AI/ML': ['Prompt Engineering', 'Embeddings', 'Vector Databases','Machine Learning', 'NLP', 'AI Workflow Orchestration', 'Optical Character Recognition (OCR)','Retrieval-Augmented Generation (RAG)', 'Model API Integration'],
+  Cloud: ['AWS (S3, RDS, VPC, EC2)', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform'],
   Tools: ['GitHub Actions', 'Observability (Logging/Metrics)', 'Jenkins', 'Nginx', 'CI/CD', 'Agile']
 } as const
 

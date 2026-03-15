@@ -53,21 +53,6 @@ useSeoMeta({
 
     <section class="space-y-8">
       <SectionTitle
-        title="Skills"
-        subtitle="Grouped by role-relevant categories."
-      />
-      <div class="grid gap-6 md:grid-cols-2">
-        <div v-for="(items, category) in skillsByCategory" :key="category" class="card space-y-3">
-          <h3 class="font-display text-xl font-semibold">{{ category }}</h3>
-          <div class="chip-group">
-            <Tag v-for="item in items" :key="item" :label="item" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="space-y-8">
-      <SectionTitle
         title="Work Experience"
         subtitle="Impact-focused achievements and outcomes."
       />
@@ -88,6 +73,21 @@ useSeoMeta({
             </li>
           </ul>
         </article>
+      </div>
+    </section>
+
+    <section class="space-y-8">
+      <SectionTitle
+        title="Skills"
+        subtitle="Grouped by role-relevant categories."
+      />
+      <div class="grid gap-6 md:grid-cols-2">
+        <div v-for="(items, category) in skillsByCategory" :key="category" class="card space-y-3">
+          <h3 class="font-display text-xl font-semibold">{{ category }}</h3>
+          <div class="chip-group">
+            <Tag v-for="item in items" :key="item" :label="item" />
+          </div>
+        </div>
       </div>
     </section>
 
