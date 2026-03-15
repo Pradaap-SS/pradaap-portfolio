@@ -29,7 +29,7 @@ export const profile = {
   tagline:
     'I build end-to-end full-stack products with AI-powered capabilities, backed by scalable distributed systems.',
   homepageSummary:
-    'Full Stack Builder with 4+ years of experience shipping production applications across logistics, healthcare, and fintech. I design complete products from frontend workflows to backend services and data layers, with strong focus on reliability, performance, and scale. I use AI both to build smarter product features and to accelerate engineering workflows from prototyping to delivery.',
+    'Full Stack Builder with 4+ years of experience shipping production applications across logistics, healthcare, and fintech. I build end-to-end products, from frontend workflows to backend services and data layers, with a strong focus on reliability, performance, and scalability. I use AI both to build smarter product features and to accelerate engineering workflows from prototyping to delivery.',
   recruiterHeadline: [
     'Builds modern full-stack products end-to-end, from responsive frontend experiences to scalable backend and distributed services.',
     'Applies AI to product capabilities (automation, intelligent workflows, document processing) and to faster development execution.',
@@ -61,10 +61,10 @@ export const experience: ExperienceItem[] = [
     summary:
       '',
     bullets: [
-      'Architected logistics backend service decomposition and database optimization using Node.js, REST APIs, and MongoDB, reducing end-to-end API latency by 15%.',
-      'Diagnosed and redesigned tightly coupled legacy service boundaries with backward-compatible APIs, reducing recurring production incidents by 20% across release cycles.',
-      'Designed an automated AP/AR document processing pipeline with asynchronous workflows, retry strategies, and third-party ML integration, reducing manual effort by 80%.',
-      'Standardized REST API versioning and MongoDB schema evolution practices, improving deployment safety and reducing breaking-change defects by 30% across quarterly releases.'
+      'Owned backend architecture for logistics platforms processing thousands of daily transactions, driving service decomposition and database optimizations that reduced end to end API latency by 15% .',
+      'Identified systemic reliability issues across tightly coupled legacy services, redesigned service boundaries, reducing recurring production incidents by 20% across multiple consecutive release cycles and operational periods.',
+      'Led design of automated document processing pipeline orchestrating third party machine learning services, owning asynchronous workflows, retries, and failure handling that reduced manual AP AR effort by 80% overall.',
+      'Established backend standards for REST APIs and MongoDB schema evolution, improving backward compatibility and deployment safety while reducing breaking change defects by 30% across multiple quarterly releases.'
     ]
   },
   {
@@ -75,9 +75,9 @@ export const experience: ExperienceItem[] = [
     summary:
       '',
     bullets: [
-      'Built and maintained backend services for EHR and clinical workflows using Java, Cerner CCL, and REST APIs, supporting thousands of clinicians in production.',
-      'Implemented HL7 and FHIR interoperability pipelines for cross-system data exchange, reducing integration failures by 25% in enterprise healthcare environments.',
-      'Refactored legacy migration and data export tooling into reusable backend components, increasing data throughput by 30% and reducing migration failures by 25%.'
+      'Designed and implemented healthcare backend components using Java, Cerner CCL, and REST APIs, improving clinical reporting and documentation workflows and increasing operational efficiency by 40% across clinical teams.',
+      'Built and enhanced interoperability pipelines aligned with HL7 and FHIR standards, reducing cross system data exchange failures by 25% while improving integration reliability across enterprise scale healthcare environments.',
+      'Refactored legacy data export and migration tooling into reusable components, increasing data throughput by 30%, reducing migration failures by 25%, and improving long term maintainability of critical healthcare data pipelines.'
     ]
   },
   {
@@ -88,9 +88,9 @@ export const experience: ExperienceItem[] = [
     summary:
       '',
     bullets: [
-      'Engineered backend payment orchestration services for regulated financial systems handling millions of monthly transactions with strict latency and consistency requirements.',
-      'Implemented idempotent payment processing with idempotency keys, retry logic, and compensating recovery workflows, reducing duplicate transactions and reconciliation failures by 20%.',
-      'Designed transaction lifecycle state management with consistency-availability tradeoff handling and PCI-DSS alignment, reducing transaction-related production incidents by 15%.',
+      'Implemented idempotent payment flows using idempotency keys, retries, and compensating recovery logic, reducing duplicate transactions and reconciliation failures by 20% across distributed payment processing services.',
+      'Worked on transaction state management using well-defined lifecycle states, balancing consistency and availability tradeoffs while ensuring PCI-DSS compliance and reducing transaction-related production incidents by 15%.',
+      'Improved service observability through structured logging, metrics, and alerting, reducing transaction latency by 15% and shortening investigation time for payment failures by 25% during production incidents.'
     ]
   },
   {
