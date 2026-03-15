@@ -6,7 +6,7 @@ const featuredProjects = computed(() => projects.slice(0, 2))
 
 const featuredSkills = computed(() => [
   ...skillsByCategory.Languages.slice(0, 3),
-  ...skillsByCategory.Backend.slice(0, 3),
+  ...(skillsByCategory['Full Stack (Frontend, Backend)'] ?? []).slice(0, 3),
   ...skillsByCategory.Cloud.slice(0, 2)
 ])
 
