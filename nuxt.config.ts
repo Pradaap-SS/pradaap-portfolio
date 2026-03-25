@@ -14,6 +14,14 @@ export default defineNuxtConfig({
     strict: true
   },
 
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: '',
+      emailjsTemplateId: '',
+      emailjsPublicKey: ''
+    }
+  },
+
   app: {
     head: {
       title: 'Pradaap Shiva Kumar Shobha',

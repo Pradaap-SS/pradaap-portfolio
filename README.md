@@ -24,6 +24,14 @@ npm run dev
 npm run build
 ```
 
+## Contact Form Setup
+
+Set these environment variables to enable EmailJS on the contact page:
+
+- `NUXT_PUBLIC_EMAILJS_SERVICE_ID`
+- `NUXT_PUBLIC_EMAILJS_TEMPLATE_ID`
+- `NUXT_PUBLIC_EMAILJS_PUBLIC_KEY`
+
 ## Project Structure
 
 ```text
