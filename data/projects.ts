@@ -118,7 +118,7 @@ export const projects: Project[] = [
       architecture:
         'Asynchronous pipeline integrating external ML APIs, with retry policies and workflow-state tracking for operational visibility.',
       responsibilities: [],
-      screenshots: ['/images/projects/ap-ar-automation-cover.svg']
+      screenshots: []
     }
   },
   {
@@ -140,7 +140,7 @@ export const projects: Project[] = [
       architecture:
         'Service-oriented healthcare backend using Java and Cerner CCL with HL7/FHIR data exchange integrations and reusable migration components.',
       responsibilities: [],
-      screenshots: ['/images/projects/healthcare-interoperability-cover.svg']
+      screenshots: []
     }
   },
   {

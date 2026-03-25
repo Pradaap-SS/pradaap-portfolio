@@ -13,14 +13,16 @@ if (!project.value) {
 const hasProblem = computed(() => Boolean(project.value?.details?.problem?.trim()))
 const hasSolution = computed(() => Boolean(project.value?.details?.solution?.trim()))
 const hasArchitecture = computed(() => Boolean(project.value?.details?.architecture?.trim()))
+const screenshots = computed(() =>
+  project.value?.details?.screenshots?.filter((item) => typeof item === 'string' && item.trim().length > 0) ?? []
+)
+const responsibilities = computed(() =>
+  project.value?.details?.responsibilities?.filter((item) => typeof item === 'string' && item.trim().length > 0) ?? []
+)
 const hasResponsibilities = computed(() =>
-  Boolean(
-    project.value?.details?.responsibilities?.some((item) => typeof item === 'string' && item.trim().length > 0)
-  )
+  responsibilities.value.length > 0
 )
-const hasScreenshots = computed(() =>
-  Boolean(project.value?.details?.screenshots?.some((item) => typeof item === 'string' && item.trim().length > 0))
-)
+const hasScreenshots = computed(() => screenshots.value.length > 0)
 
 useSeoMeta({
   title: project.value.title,
@@ -61,11 +63,11 @@ useSeoMeta({
           <span v-if="!project.githubUrl && !project.liveUrl" class="chip">Internal enterprise project (details shareable)</span>
         </div>
       </div>
-      <img
+      <ProjectMediaFrame
         :src="project.image"
         :alt="project.title"
-        class="h-64 w-full rounded-2xl border border-slate-200/60 object-cover shadow-soft dark:border-slate-800/70"
-        loading="lazy"
+        variant="hero"
+        loading="eager"
       />
     </section>
 
@@ -88,7 +90,7 @@ useSeoMeta({
       <SectionTitle title="Key Responsibilities" />
       <ul class="grid gap-3 text-slate-600 dark:text-slate-300">
         <li
-          v-for="(item, index) in project.details.responsibilities.filter((entry) => entry && entry.trim().length > 0)"
+          v-for="(item, index) in responsibilities"
           :key="item"
           class="card card-reveal"
           :style="{ '--reveal-delay': `${160 + index * 60}ms` }"
@@ -98,16 +100,26 @@ useSeoMeta({
       </ul>
     </section>
 
-    <section v-if="hasScreenshots" class="space-y-6">
-      <SectionTitle title="Screenshots" subtitle="Representative visual placeholders for portfolio layout." />
-      <div class="grid gap-6 md:grid-cols-2">
-        <img
-          v-for="shot in project.details.screenshots.filter((entry) => entry && entry.trim().length > 0)"
-          :key="shot"
-          :src="shot"
-          :alt="`${project.title} screenshot`"
-          class="h-56 w-full rounded-2xl border border-slate-200/60 object-cover shadow-soft dark:border-slate-800/70"
+    <section v-if="hasScreenshots" class="space-y-8">
+      <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+        <SectionTitle
+          title="Screenshots"
         />
+        <span class="chip w-fit">{{ screenshots.length }} views</span>
+      </div>
+      <div class="grid gap-6 xl:grid-cols-2">
+        <article
+          v-for="(shot, index) in screenshots"
+          :key="shot"
+          class="card card-reveal space-y-4 p-4 sm:p-5"
+          :style="{ '--reveal-delay': `${220 + index * 80}ms` }"
+        >
+          <ProjectMediaFrame
+            :src="shot"
+            :alt="`${project.title} screenshot ${index + 1}`"
+            variant="gallery"
+          />
+        </article>
       </div>
     </section>
   </div>

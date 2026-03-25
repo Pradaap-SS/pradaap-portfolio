@@ -8,11 +8,10 @@ defineProps<{
 
 <template>
   <article class="card card-reveal flex h-full flex-col gap-4">
-    <img
+    <ProjectMediaFrame
       :src="project.image"
       :alt="project.title"
-      class="h-44 w-full rounded-2xl border border-slate-200/60 object-cover shadow-sm dark:border-slate-800/70"
-      loading="lazy"
+      variant="card"
     />
     <div class="flex-1 space-y-3">
       <h3 class="text-2xl font-semibold leading-tight text-slate-900 dark:text-slate-100">{{ project.title }}</h3>
