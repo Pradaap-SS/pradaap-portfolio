@@ -22,6 +22,33 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: 'ai-customer-support-copilot',
+    title: 'AI Customer Support Copilot',
+    description:
+      'Human-in-the-loop support copilot that turns raw customer tickets into AI-assisted triage, retrieval-backed drafting, and agent-reviewed responses.',
+    longDescription:
+      'AI Customer Support Copilot is a product-style demo built around how modern support teams actually work: durable intake first, then AI classification, routing, knowledge retrieval, and draft generation, with a human agent reviewing the final response before it is sent. The experience is intentionally shaped like an operator dashboard instead of a chatbot so the workflow emphasizes trust, auditability, and human accountability.',
+    techStack: ['Human-in-the-Loop AI', 'Support Workflow', 'Dashboard UI', 'Vercel'],
+    role: 'Personal Project',
+    period: '2026',
+    githubUrl: 'https://github.com/Pradaap-SS/AI-Customer-Support-Copilot',
+    liveUrl: 'https://ai-support-frontend-five.vercel.app/',
+    image: '/images/projects/ai-support-copilot-cover.png',
+    details: {
+      problem:
+        'Support teams need faster triage and drafting, but fully autonomous customer replies can reduce trust when agents cannot validate the reasoning, evidence, or final tone.',
+      solution:
+        'Designed a copilot workflow that preserves the original customer signal, enriches each ticket with AI-driven classification and routing, retrieves supporting knowledge, and presents an editable draft for human review before sending.',
+      architecture:
+        'Split-panel product experience with customer intake on one side and an agent queue on the other, backed by a staged pipeline for ticket ingestion, LLM classification, priority routing, retrieval-backed drafting, and final human approval.',
+      responsibilities: [],
+      screenshots: [
+        '/images/projects/ai-support-copilot-cover.png',
+        '/images/projects/ai-support-copilot-workflow.png'
+      ]
+    }
+  },
+  {
     slug: 'agent-orchestrator',
     title: 'Agent-Orchestrator',
     description:
