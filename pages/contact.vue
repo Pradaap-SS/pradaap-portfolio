@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import emailjs from '@emailjs/browser'
 import { profile } from '~/data/profile'
 
 type NoticeState = {
@@ -72,10 +73,10 @@ const submitForm = async () => {
   if (!isEmailjsConfigured.value) {
     setNotice(
       {
-        type: 'info',
-        message: `Contact form is not configured yet. Please email me directly at ${profile.email}.`
+        type: 'error',
+        message: 'Unable to send your message right now. Please try again shortly.'
       },
-      5200
+      4200
     )
     return
   }
@@ -83,8 +84,6 @@ const submitForm = async () => {
   isSending.value = true
 
   try {
-    const { default: emailjs } = await import('@emailjs/browser')
-
     await emailjs.send(
       emailjsConfig.value.serviceId!,
       emailjsConfig.value.templateId!,
@@ -141,7 +140,7 @@ useSeoMeta({
         <div class="space-y-2">
           <p class="section-kicker">Get In Touch</p>
           <p class="text-sm leading-7 text-slate-600 dark:text-slate-300">
-            Send a note about a role, project, or collaboration. Messages are delivered through EmailJS when the form is configured.
+            Send a note about a role, project, or collaboration. Messages are delivered directly through the contact form.
           </p>
         </div>
 
@@ -210,9 +209,6 @@ useSeoMeta({
             {{ profile.location }}
           </div>
         </div>
-        <p v-if="!isEmailjsConfigured" class="rounded-2xl border border-amber-200/70 bg-amber-50/85 px-4 py-3 text-sm text-amber-800 dark:border-amber-500/25 dark:bg-amber-500/10 dark:text-amber-200">
-          EmailJS keys are not configured yet. The page will still guide visitors to direct email.
-        </p>
       </div>
     </div>
 
