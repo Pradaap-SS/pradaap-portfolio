@@ -142,5 +142,32 @@ export const projects: Project[] = [
       responsibilities: [],
       screenshots: ['/images/projects/healthcare-interoperability-cover.svg']
     }
+  },
+  {
+    slug: 'metaverse-website',
+    title: 'Metaverse Website',
+    description:
+      'Frontend-only landing page concept for a fictional metaverse brand, focused on immersive visuals, animated sections, and polished marketing UI.',
+    longDescription:
+      'Metaverse Website is a frontend UI project built as a cinematic landing page for a fictional metaverse experience. The site leans on oversized typography, gradient lighting, scroll-driven storytelling, and section-based composition to present worlds to explore, onboarding steps, social presence, and editorial-style content without any backend dependency.',
+    techStack: ['Next.js', 'JavaScript', 'Tailwind CSS', 'Frontend UI', 'Vercel'],
+    role: 'Personal Project',
+    period: '2023',
+    githubUrl: 'https://github.com/Pradaap-SS/metaverse-website',
+    liveUrl: 'https://metaverse-website-plum.vercel.app/',
+    image: '/images/projects/metaverse-website-cover.png',
+    details: {
+      problem:
+        'The goal was to present a speculative metaverse product in a way that felt immersive and premium using only frontend design, layout, and motion.',
+      solution:
+        'Built a visually rich single-page experience with a bold hero, explorable world cards, guided onboarding sections, and social-proof style content blocks that create a cohesive product narrative.',
+      architecture:
+        'Section-based Next.js frontend composed from reusable UI blocks, static content, visual assets, and responsive styling, then deployed as a lightweight Vercel-hosted marketing experience.',
+      responsibilities: [],
+      screenshots: [
+        '/images/projects/metaverse-website-cover.png',
+        '/images/projects/metaverse-website-sections.png'
+      ]
+    }
   }
 ]
