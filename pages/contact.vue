@@ -89,10 +89,9 @@ const submitForm = async () => {
       emailjsConfig.value.templateId!,
       {
         from_name: form.name.trim(),
-        to_name: profile.preferredName,
+        to_name: "Pradaap Shobha",
         from_email: form.email.trim(),
-        to_email: profile.email,
-        reply_to: form.email.trim(),
+        to_email: 'pradaap.shobha@gmail.com',
         message: form.message.trim()
       },
       {
