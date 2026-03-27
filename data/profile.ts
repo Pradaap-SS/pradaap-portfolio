@@ -29,7 +29,7 @@ export const profile = {
   tagline:
     'I build end-to-end full-stack products with AI-powered capabilities, backed by scalable distributed systems.',
   homepageSummary:
-    'Full Stack Builder with 4+ years of experience shipping production applications across logistics, healthcare, and fintech. I build end-to-end products, from frontend workflows to backend services and data layers, with a strong focus on reliability, performance, and scalability. I use AI both to build smarter product features and to accelerate engineering workflows from prototyping to delivery.',
+    'Full Stack Builder with 5+ years of experience shipping production applications across logistics, healthcare, and fintech. I build end-to-end products, from frontend workflows to backend services and data layers, with a strong focus on reliability, performance, and scalability. I use AI both to build smarter product features and to accelerate engineering workflows from prototyping to delivery.',
   recruiterHeadline: [
     'Builds modern full-stack products end-to-end, from responsive frontend experiences to scalable backend and distributed services.',
     'Applies AI to product capabilities (automation, intelligent workflows, document processing) and to faster development execution.',
@@ -38,7 +38,7 @@ export const profile = {
 } as const
 
 export const aboutParagraphs: string[] = [
-  'I am a Full Stack Builder and Software Engineer with 4+ years of experience delivering end-to-end products across logistics, healthcare, and fintech. I build complete systems from user-facing workflows to backend services and data layers for high-transaction, operationally critical environments.',
+  'I am a Full Stack Builder and Software Engineer with 5+ years of experience delivering end-to-end products across logistics, healthcare, and fintech. I build complete systems from user-facing workflows to backend services and data layers for high-transaction, operationally critical environments.',
   'My work combines product development with strong backend foundations: API design, asynchronous processing, distributed service patterns, interoperability, data pipelines, schema evolution, and CI/CD. I focus on reliable releases, predictable scalability, and measurable production impact, including lower latency, fewer incidents, and major reductions in manual operations.',
   'I build products using AI capabilities to add intelligent workflows and automation, and I also use AI to speed up engineering delivery. I am targeting full-stack engineering roles centered on AI-driven product development, backend and distributed systems, and scalable cloud-native architectures.'
 ]
@@ -97,7 +97,7 @@ export const experience: ExperienceItem[] = [
     title: 'Systems Engineer Intern',
     company: 'Infosys',
     location: 'Mysuru, India',
-    period: 'Feb 2020 - Apr 2020',
+    period: 'Jan 2020 - May 2020',
     summary:
       '',
     bullets: [
