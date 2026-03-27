@@ -2,7 +2,7 @@
 import { profile, skillsByCategory } from '~/data/profile'
 import { projects } from '~/data/projects'
 
-const featuredProjects = computed(() => projects.slice(0, 2))
+const featuredProjects = computed(() => projects.slice(0, 3))
 
 const featuredSkills = computed(() => [
   ...skillsByCategory.Languages.slice(0, 3),
