@@ -5,9 +5,16 @@ import { projects } from '~/data/projects'
 const featuredProjects = computed(() => projects.slice(0, 3))
 
 const featuredSkills = computed(() => [
-  ...skillsByCategory.Languages.slice(0, 3),
-  ...(skillsByCategory['Full Stack (Frontend, Backend)'] ?? []).slice(0, 3),
-  ...skillsByCategory.Cloud.slice(0, 2)
+  skillsByCategory['System Design & Architecture'][0],
+  skillsByCategory['System Design & Architecture'][1],
+  skillsByCategory['Full Stack (Frontend, Backend)'][8],
+  skillsByCategory['Full Stack (Frontend, Backend)'][10],
+  skillsByCategory['Message Queues & Streaming'][0],
+  skillsByCategory.Databases[5],
+  skillsByCategory.Cloud[1],
+  skillsByCategory.Cloud[2],
+  skillsByCategory['Observability & Reliability'][0],
+  skillsByCategory.Cloud[4]
 ])
 
 useSeoMeta({
@@ -48,7 +55,7 @@ useSeoMeta({
         <NuxtLink to="/about" class="btn-primary w-fit">More About Me</NuxtLink>
       </div>
       <div class="card space-y-4">
-        <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Core Stack</p>
+        <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Core Engineering Stack</p>
         <div class="chip-group">
           <Tag v-for="skill in featuredSkills" :key="skill" :label="skill" />
         </div>

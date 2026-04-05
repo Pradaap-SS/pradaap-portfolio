@@ -2,6 +2,9 @@
   "name": "nuxt-portfolio",
   "private": true,
   "type": "module",
+  "imports": {
+    "#internal/nuxt/paths": "./internal/nuxt-paths.mjs"
+  },
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
