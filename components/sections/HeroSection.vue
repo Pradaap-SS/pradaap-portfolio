@@ -22,7 +22,7 @@ import { profile } from '~/data/profile'
       </p>
       <div class="reveal-up flex flex-wrap gap-3" style="--reveal-delay: 320ms">
         <NuxtLink to="/projects" class="btn-primary">View Projects</NuxtLink>
-        <a href="/cv.pdf" class="btn-secondary" download>Download CV</a>
+        <a href="/Pradaap_Shobha_resume.pdf" class="btn-secondary" download>Download CV</a>
       </div>
       <div class="reveal-up chip-group" style="--reveal-delay: 390ms">
         <span class="chip">Distributed Systems</span>

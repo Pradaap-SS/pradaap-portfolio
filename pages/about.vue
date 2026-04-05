@@ -20,7 +20,7 @@ useSeoMeta({
           <p v-for="paragraph in aboutParagraphs" :key="paragraph">{{ paragraph }}</p>
         </div>
         <div class="flex flex-wrap items-center gap-3">
-          <a href="/cv.pdf" class="btn-secondary" download>
+          <a href="/Pradaap_Shobha_resume.pdf" class="btn-secondary" download>
             Download CV
           </a>
           <a :href="profile.linkedin" target="_blank" rel="noopener noreferrer" class="btn-secondary">

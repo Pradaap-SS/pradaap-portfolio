@@ -65,7 +65,7 @@ Set these environment variables to enable EmailJS on the contact page:
 │       ├── index.vue
 │       └── [slug].vue
 └── public/
-    ├── cv.pdf
+    ├── Pradaap_Shobha_resume.pdf
     ├── favicon.svg
     ├── og-image.svg
     └── images/
@@ -78,7 +78,7 @@ Set these environment variables to enable EmailJS on the contact page:
 - `layouts/default.vue` wraps all pages by default.
 - `components/` is auto-imported.
 - `composables/` is auto-imported for `useX` helpers.
-- `public/` files are served as-is (for example `public/cv.pdf` => `/cv.pdf`).
+- `public/` files are served as-is (for example `public/Pradaap_Shobha_resume.pdf` => `/Pradaap_Shobha_resume.pdf`).
 - `assets/` files are processed by the build pipeline.
 
 ## Where To Edit Content
@@ -94,7 +94,7 @@ Set these environment variables to enable EmailJS on the contact page:
 
 - Add a new project: append a new object in `data/projects.ts`.
 - Update hero/about text: edit fields in `data/profile.ts`.
-- Replace CV: overwrite `public/cv.pdf`.
+- Replace CV: overwrite `public/Pradaap_Shobha_resume.pdf`.
 - Replace project images: add files in `public/images/projects/` and update image paths in `data/projects.ts`.
 
 ## Notes
