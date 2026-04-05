@@ -4,6 +4,7 @@ import { publications } from '~/data/publications'
 const route = useRoute()
 const slug = computed(() => route.params.slug as string)
 const publication = computed(() => publications.find((item) => item.slug === slug.value))
+const isExternalUrl = (url: string) => url.startsWith('http://') || url.startsWith('https://')
 
 if (!publication.value) {
   throw createError({ statusCode: 404, statusMessage: 'Publication not found' })
@@ -33,6 +34,17 @@ useSeoMeta({
       <div class="prose max-w-none dark:prose-invert" v-html="publication.content"></div>
     </section>
 
-    <NuxtLink to="/publications" class="btn-secondary w-fit">Back to Publications</NuxtLink>
+    <div class="flex flex-wrap gap-3">
+      <NuxtLink to="/publications" class="btn-secondary w-fit">Back to Publications</NuxtLink>
+      <a
+        v-if="publication.sourceUrl"
+        :href="publication.sourceUrl"
+        :target="isExternalUrl(publication.sourceUrl) ? '_blank' : undefined"
+        :rel="isExternalUrl(publication.sourceUrl) ? 'noopener noreferrer' : undefined"
+        class="btn-secondary w-fit"
+      >
+        {{ publication.sourceLabel ?? 'Open Source' }}
+      </a>
+    </div>
   </article>
 </template>

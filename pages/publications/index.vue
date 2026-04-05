@@ -2,7 +2,15 @@
 import { publications } from '~/data/publications'
 
 const sortedPublications = computed(() =>
-  [...publications].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  [...publications].sort((a, b) => {
+    const orderDifference = (a.sortOrder ?? 0) - (b.sortOrder ?? 0)
+
+    if (orderDifference !== 0) {
+      return orderDifference
+    }
+
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
 )
 
 useSeoMeta({

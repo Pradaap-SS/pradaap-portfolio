@@ -1,7 +1,6 @@
 export type ExperienceItem = {
   title: string
   company: string
-  location: string
   period: string
   summary: string
   bullets: string[]
@@ -61,7 +60,6 @@ export const experience: ExperienceItem[] = [
   {
     title: 'Full Stack Software Engineer',
     company: 'Hub Group Inc',
-    location: 'Oak Brook, IL',
     period: 'Jan 2024 - Present',
     summary:
       'Leading large-scale logistics platform modernization across billing, order management, observability, and deployment automation using microservices, Kafka, caching, and cloud-native tooling.',
@@ -79,7 +77,6 @@ export const experience: ExperienceItem[] = [
   {
     title: 'Software Engineer',
     company: 'Cerner Corporation [Oracle Health]',
-    location: 'Bengaluru, India',
     period: 'Apr 2021 - Aug 2022',
     summary:
       'Built healthcare interoperability and reporting solutions across enterprise EHR workflows using HL7, FHIR, CCL, and Oracle Database.',
@@ -92,7 +89,6 @@ export const experience: ExperienceItem[] = [
   {
     title: 'Programmer Analyst',
     company: 'Cognizant',
-    location: 'Chennai, India',
     period: 'Sep 2020 - Apr 2021',
     summary:
       'Developed secure financial platforms and microservices for high-volume transaction workloads using Spring Boot, Redis, and distributed database design.',

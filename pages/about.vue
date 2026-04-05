@@ -61,7 +61,7 @@ useSeoMeta({
           <div class="flex flex-wrap items-start justify-between gap-3">
             <div>
               <h3 class="font-display text-xl font-semibold">{{ item.title }}</h3>
-              <p class="text-sm font-medium text-brand-600">{{ item.company }} - {{ item.location }}</p>
+              <p class="text-sm font-medium text-brand-600">{{ item.company }}</p>
             </div>
             <span class="chip">{{ item.period }}</span>
           </div>
