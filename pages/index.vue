@@ -7,13 +7,19 @@ const featuredProjects = computed(() => projects.slice(0, 3))
 const featuredSkills = computed(() => [
   skillsByCategory['System Design & Architecture'][0],
   skillsByCategory['System Design & Architecture'][1],
+  skillsByCategory['Full Stack (Frontend, Backend)'][0],
+  skillsByCategory['Full Stack (Frontend, Backend)'][1],
   skillsByCategory['Full Stack (Frontend, Backend)'][8],
   skillsByCategory['Full Stack (Frontend, Backend)'][10],
   skillsByCategory['Message Queues & Streaming'][0],
+  skillsByCategory['Message Queues & Streaming'][1],
+  skillsByCategory.Databases[0],
+  skillsByCategory.Databases[2],
   skillsByCategory.Databases[5],
+  skillsByCategory.Cloud[0],
   skillsByCategory.Cloud[1],
   skillsByCategory.Cloud[2],
-  skillsByCategory['Observability & Reliability'][0],
+  skillsByCategory['Observability & Reliability'][2],
   skillsByCategory.Cloud[4]
 ])
 
