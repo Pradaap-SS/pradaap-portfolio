@@ -73,7 +73,7 @@ export const experience: ExperienceItem[] = [
       'Redesigned distributed API architecture to support 10x traffic growth, implementing Redis clustering and multi-tier caching strategies to handle 500K+ monthly requests and reducing P95 response time by 60%, from 800ms to 320ms.',
       'Built an anomaly detection system using threshold-based alerting and ML-augmented baselines with TensorFlow, integrated with Elasticsearch and Kibana dashboards to detect 15+ critical incidents and reduce MTTD to under 2 minutes.',
       'Optimized Node.js and Express microservices plus MongoDB aggregation pipelines through indexing and query refactoring, improving API response times by 40% and reducing P99 latency from 1.2s to 720ms for 50K daily users.',
-      'Automated zero-downtime CI/CD pipelines by orchestrating Jenkins workflows across 8 interdependent microservices, adding smoke tests and rollback mechanisms, and reducing release cycle time from 4 hours to 1 hour.'
+      'Automated zero-downtime deployment pipeline using Kubernetes rolling updates via Jenkins, coordinating releases across 8 microservices with automated health checks, and rollback mechanisms, reducing release cycle (4 hours → 1 hour)'
     ]
   },
   {
