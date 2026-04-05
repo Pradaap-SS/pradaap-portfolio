@@ -36,25 +36,25 @@ import { profile } from '~/data/profile'
     <aside class="mx-auto w-full max-w-sm reveal-up" style="--reveal-delay: 230ms">
       <div class="card space-y-4">
         <p class="section-kicker">Recruiter Snapshot</p>
-        <h2 class="section-title-sm text-slate-900 dark:text-white">Impact-focused Full Stack Engineering</h2>
+        <h2 class="section-title-sm text-slate-900 dark:text-white">Distributed Systems and Full-Stack Engineering</h2>
         <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300 md:text-base">
           {{ profile.recruiterHeadline[0] }}
         </p>
         <div class="grid gap-3 text-sm text-slate-500 dark:text-slate-300">
           <div class="flex items-center gap-2">
             <span class="h-2 w-2 rounded-full bg-accent-500"></span>
-            15% lower API latency and 20% fewer incidents
+            $2B+ annual invoice volume across a modernized billing platform
           </div>
           <div class="flex items-center gap-2">
             <span class="h-2 w-2 rounded-full bg-secondary-500"></span>
-            30% faster database queries through optimization
+            $500K annual savings and 10x traffic-ready API architecture
           </div>
           <div class="flex items-center gap-2">
             <span class="h-2 w-2 rounded-full bg-brand-500"></span>
-            80% reduction in manual effort
+            60% lower P95 latency and 85% less manual intervention
           </div>
           <p class="inline-flex w-fit items-center gap-2 rounded-full border border-secondary-200/70 bg-secondary-50/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-secondary-700 shadow-sm dark:border-secondary-900/60 dark:bg-secondary-900/20 dark:text-secondary-200">
-            Open to SDE (AI/ML) opportunities
+            Open to Software Engineer opportunities
           </p>
         </div>
       </div>
