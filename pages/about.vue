@@ -53,31 +53,6 @@ useSeoMeta({
 
     <section class="space-y-8">
       <SectionTitle
-        title="Work Experience"
-        subtitle="Impact-focused achievements and outcomes."
-      />
-      <div class="space-y-6">
-        <article v-for="item in experience" :key="`${item.company}-${item.period}`" class="card space-y-4">
-          <div class="flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <h3 class="font-display text-xl font-semibold">{{ item.title }}</h3>
-              <p class="text-sm font-medium text-brand-600">{{ item.company }}</p>
-            </div>
-            <span class="chip">{{ item.period }}</span>
-          </div>
-          <p class="text-slate-600 dark:text-slate-300">{{ item.summary }}</p>
-          <ul class="space-y-3 text-slate-700 dark:text-slate-200">
-            <li v-for="bullet in item.bullets" :key="bullet" class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"></span>
-              <span>{{ bullet }}</span>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="space-y-8">
-      <SectionTitle
         title="Skills"
         subtitle="Grouped by role-relevant categories."
       />
@@ -93,6 +68,31 @@ useSeoMeta({
 
     <section class="space-y-8">
       <SectionTitle
+        title="Work Experience"
+        subtitle=""
+      />
+      <div class="space-y-6">
+        <article v-for="item in experience" :key="`${item.company}-${item.period}`" class="card space-y-4">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h3 class="font-display text-xl font-semibold">{{ item.title }}</h3>
+              <p class="text-sm font-medium text-brand-600">{{ item.company }}</p>
+            </div>
+            <span class="chip">{{ item.period }}</span>
+          </div>
+          <!-- <p class="text-slate-600 dark:text-slate-300">{{ item.summary }}</p> -->
+          <!-- <ul class="space-y-3 text-slate-700 dark:text-slate-200">
+            <li v-for="bullet in item.bullets" :key="bullet" class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"></span>
+              <span>{{ bullet }}</span>
+            </li>
+          </ul> -->
+        </article>
+      </div>
+    </section>
+
+    <section class="space-y-8">
+      <SectionTitle
         title="Education"
         subtitle="Academic foundation."
       />
@@ -100,7 +100,7 @@ useSeoMeta({
         <article v-for="item in education" :key="item.degree" class="card space-y-1">
           <h3 class="font-display text-xl font-semibold">{{ item.degree }}</h3>
           <p class="text-sm text-brand-600">{{ item.institution }}</p>
-          <p class="text-sm text-slate-500 dark:text-slate-400">{{ item.location }}</p>
+          <!-- <p class="text-sm text-slate-500 dark:text-slate-400">{{ item.location }}</p> -->
         </article>
       </div>
     </section>

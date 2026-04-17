@@ -37,28 +37,22 @@ export const profile = {
 } as const
 
 export const aboutParagraphs: string[] = [
-  'I am a Full-Stack Software Engineer with 5+ years of experience building distributed systems, microservices, and cloud-native platforms across logistics, healthcare, and financial services. My work spans Node.js, Java, TypeScript, Azure, Kubernetes, event-driven systems, APIs, databases, and frontend applications for enterprise environments where reliability, scalability, and operational efficiency matter every day.',
-  'At Hub Group, I help modernize core logistics platforms by building microservices that support a billing system processing more than $2B in annual invoice volume. I have contributed to the migration from legacy COBOL systems to Node.js services on Azure Kubernetes Service, built real-time recovery workflows with Azure Service Bus, and delivered API and ETL integrations handling 50K+ daily orders. That work has helped drive an estimated $500K in annual cost reduction, improve order completion to 99.8%, reduce manual intervention by 85%, and shorten release cycles through zero-downtime deployments.',
-  'Earlier in my career, I built HL7 and FHIR integrations and reporting solutions at Cerner to support high-volume healthcare workflows, and developed secure financial platforms at Cognizant using React, Spring Boot, OAuth2/JWT, Redis, and distributed database design. I enjoy solving engineering problems where system design, observability, resilience, and measurable business outcomes all intersect, and I am especially motivated by opportunities to modernize legacy systems into scalable, maintainable platforms.'
+  'Pradaap is a Full Stack Software Engineer passionate about building reliable, scalable systems that create real business impact. With 5+ years of experience across logistics, healthcare, and financial services, he specializes in designing and delivering distributed systems, microservices, and cloud-native platforms — with hands-on depth across Node.js, Java, TypeScript, Azure, Kubernetes, event-driven architecture, and full-stack delivery.',
+  'He has led platform modernizations that retired legacy COBOL systems, built billing infrastructure processing $2B+ in annual invoice volume, developed healthcare interoperability pipelines at Cerner, and delivered secure financial platforms at Cognizant. He is especially motivated by problems where system design, observability, and measurable outcomes intersect — and by opportunities to turn complex, legacy-burdened platforms into maintainable, high-performance systems.'
 ]
 
 export const skillsByCategory = {
-  Languages: ['JavaScript', 'Python', 'TypeScript', 'Java', 'SQL', 'CCL', 'C++'],
-  Databases: ['MongoDB', 'PostgreSQL', 'MySQL', 'Oracle Database', 'SQL Server', 'Redis', 'DynamoDB'],
-  'Full Stack (Frontend, Backend)': ['React.js', 'Vue.js', 'Next.js', 'Angular', 'HTML5', 'CSS3', 'Redux', 'Vuex', 'Node.js', 'Express', 'Spring Boot', 'REST APIs', 'GraphQL', 'API Design', 'WebSockets'],
-  'System Design & Architecture': ['Distributed Systems', 'Microservices Architecture', 'Event-Driven Architecture', 'Service-Oriented Architecture (SOA)', 'System Scalability', 'High Availability', 'Load Balancing', 'Service Mesh', 'API Gateway', 'Fault Tolerance'],
-  Cloud: ['Azure (Azure Kubernetes Service (AKS), Service Bus, Blob Storage, DevOps, Logic Apps)', 'AWS', 'Kubernetes', 'Docker', 'CI/CD Pipelines', 'Jenkins', 'GitHub Actions', 'Terraform', 'Container Orchestration'],
-  'Message Queues & Streaming': ['Azure service bus','Apache Kafka', 'RabbitMQ', 'Event Streaming', 'Asynchronous Processing', 'ETL Pipelines'],
-  'Security & Authentication': ['OAuth2', 'JWT', 'Role-Based Access Control', 'API Security', 'Data Encryption', 'HIPAA/SOC2 Compliance'],
-  'Observability & Reliability': ['Elasticsearch', 'Kibana', 'Prometheus', 'ELK Stack', 'Metrics & Monitoring', 'Alerting', 'Distributed Tracing', 'Performance Optimization', 'Application Reliability Engineering', 'Incident Response', 'On-Call Rotation'],
-  'Testing & Quality': ['Unit Testing', 'Integration Testing', 'Test-Driven Development (TDD)', 'SonarQube', 'Automated Testing'],
-  'AI/ML': ['FastAPI', 'TensorFlow', 'LLM Workflows', 'GenAI Application Integration', 'Agent Orchestration'],
-  Tools: ['Git', 'Agile/Scrum', 'RESTful Design Patterns', 'Code Review', 'Technical Documentation', 'System Troubleshooting']
+  'Programming Languages': ['Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'C++'],
+  'Frontend Development': ['React.js', 'Next.js', 'Vue.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Redux', 'Angular'],
+  'Backend Development': ['Node.js', 'Express.js', 'Spring Boot', 'REST APIs', 'GraphQL', 'JWT', 'OAuth2', 'WebSockets'],
+  'Databases & Cloud': ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Apache Kafka', 'RabbitMQ', 'Azure', 'AWS', 'Docker', 'DynamoDB'],
+  'DevOps, Tools & Testing': ['Git', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD Pipelines', 'Terraform', 'Postman', 'SonarQube', 'Unit Testing', 'Integration Testing'],
+  'System Design & Architecture': ['Microservices Architecture', 'Distributed Systems', 'Event-Driven Architecture', 'Scalability & Performance Optimization', 'Cloud Architecture']
 } as const
 
 export const experience: ExperienceItem[] = [
   {
-    title: 'Full Stack Software Engineer',
+    title: 'Full Stack Developer',
     company: 'Hub Group Inc',
     period: 'Jan 2024 - Present',
     summary:
@@ -98,6 +92,13 @@ export const experience: ExperienceItem[] = [
       'Architected a hybrid database solution using MySQL sharding strategies and indexing, improving query performance by 40% while supporting 100M+ records across distributed financial transaction systems with strong ACID guarantees.'
     ]
   },
+  {
+    title: 'Software Developer Intern',
+    company: 'Infosys',
+    period: 'Jan 2020 - May 2020',
+    summary: '',
+    bullets: []
+  },
 ]
 
 export const education: EducationItem[] = [
@@ -105,5 +106,10 @@ export const education: EducationItem[] = [
     degree: 'Master of Computer Science',
     institution: 'Illinois Institute of Technology',
     location: 'USA'
+  },
+  {
+    degree: 'Bachelor of Engineering in Computer Science',
+    institution: 'Visvesvaraya Technological University',
+    location: 'India'
   }
 ]
