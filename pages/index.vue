@@ -50,12 +50,12 @@ useSeoMeta({
       <NuxtLink to="/projects" class="btn-secondary w-fit">View All Projects</NuxtLink>
     </section>
 
-    <section class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+    <section class="grid gap-8 lg:gap-16 lg:grid-cols-[1.4fr_1fr]">
       <div class="space-y-4">
         <SectionTitle
           title="About Me"
         />
-        <p class="section-lead max-w-3xl">
+        <p class="section-lead max-w-2xl">
           {{ profile.homepageSummary }}
         </p>
         <NuxtLink to="/about" class="btn-primary w-fit">More About Me</NuxtLink>

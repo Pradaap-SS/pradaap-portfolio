@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { profile } from '~/data/profile'
 
 const route = useRoute()
@@ -8,7 +10,7 @@ const links = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Projects', to: '/projects' },
-  { label: 'Publications', to: '/publications' },
+  { label: 'Insights', to: '/insights' },
   { label: 'Contact', to: '/contact' }
 ]
 
@@ -26,9 +28,10 @@ watch(
 </script>
 
 <template>
-  <header class="sticky top-4 z-50 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+  <header class="nav-header fixed top-0 left-0 right-0 z-50 w-full">
+    <div class="mx-auto w-full max-w-[2000px] px-4 pb-3 pt-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20">
     <div
-      class="surface-card flex items-center gap-4 border-white/50 bg-white/78 px-4 py-3 shadow-[0_18px_50px_-30px_rgba(15,23,42,0.35)] backdrop-blur-2xl md:px-5"
+      class="flex items-center gap-4 rounded-[1.35rem] border border-slate-200/70 px-4 py-3 shadow-[0_18px_50px_-30px_rgba(15,23,42,0.35)] dark:border-slate-700/70 md:px-5"
     >
       <NuxtLink
         to="/"
@@ -105,7 +108,7 @@ watch(
 
     <div
       v-if="isOpen"
-      class="surface-card mt-3 border-white/50 bg-white/92 p-2 shadow-[0_20px_44px_-28px_rgba(15,23,42,0.45)] backdrop-blur-2xl md:hidden"
+      class="mt-2 rounded-[1.35rem] border border-slate-200/70 bg-white p-2 shadow-[0_20px_44px_-28px_rgba(15,23,42,0.45)] dark:border-slate-700/70 dark:bg-slate-950 md:hidden"
     >
       <nav aria-label="Mobile primary" class="grid gap-1">
         <NuxtLink
@@ -129,5 +132,26 @@ watch(
         </NuxtLink>
       </nav>
     </div>
+    </div>
   </header>
 </template>
+
+<style scoped>
+.nav-header {
+  background-image:
+    radial-gradient(circle at 8% -8%, rgb(47 127 124 / 0.14), transparent 42%),
+    radial-gradient(circle at 82% 0%, rgb(168 111 53 / 0.11), transparent 40%),
+    radial-gradient(circle at 92% 84%, rgb(45 150 108 / 0.08), transparent 32%),
+    linear-gradient(180deg, #f8f6f2 0%, #f4efe7 42%, #f0ece4 100%);
+  background-attachment: fixed;
+}
+
+.dark .nav-header {
+  background-image:
+    radial-gradient(circle at 8% -10%, rgb(82 171 165 / 0.18), transparent 42%),
+    radial-gradient(circle at 86% -4%, rgb(194 145 88 / 0.12), transparent 38%),
+    radial-gradient(circle at 92% 88%, rgb(45 150 108 / 0.1), transparent 30%),
+    linear-gradient(180deg, #11100e 0%, #13110f 48%, #161412 100%);
+  background-attachment: fixed;
+}
+</style>

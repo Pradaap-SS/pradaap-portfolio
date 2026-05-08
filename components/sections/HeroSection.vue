@@ -3,7 +3,7 @@ import { profile } from '~/data/profile'
 </script>
 
 <template>
-  <section class="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
+  <section class="grid gap-10 lg:gap-16 lg:grid-cols-[1.4fr_1fr] lg:items-center">
     <div class="space-y-6">
       <h1 class="reveal-up section-title text-slate-900 dark:text-white" style="--reveal-delay: 90ms">
         {{ profile.preferredName }}
@@ -15,7 +15,7 @@ import { profile } from '~/data/profile'
         {{ profile.role }}
       </p>
       <p
-        class="reveal-up section-lead max-w-xl dark:text-slate-300"
+        class="reveal-up section-lead max-w-2xl dark:text-slate-300"
         style="--reveal-delay: 250ms"
       >
         {{ profile.tagline }}
@@ -33,25 +33,25 @@ import { profile } from '~/data/profile'
       </div>
     </div>
 
-    <aside class="mx-auto w-full max-w-sm reveal-up" style="--reveal-delay: 230ms">
-      <div class="card space-y-4">
+    <aside class="w-full reveal-up" style="--reveal-delay: 230ms">
+      <div class="card space-y-3">
         <p class="section-kicker">Recruiter Snapshot</p>
-        <h2 class="section-title-sm text-slate-900 dark:text-white">Distributed Systems and Full-Stack Engineering</h2>
-        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300 md:text-base">
+        <h2 class="text-lg font-semibold leading-snug tracking-tight text-slate-900 dark:text-white">Distributed Systems and Full-Stack Engineering</h2>
+        <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">
           {{ profile.recruiterHeadline[0] }}
         </p>
-        <div class="grid gap-3 text-sm text-slate-500 dark:text-slate-300">
-          <div class="flex items-center gap-2">
-            <span class="h-2 w-2 rounded-full bg-accent-500"></span>
-            $2B+ annual invoice volume across a modernized billing platform
+        <div class="grid gap-2 text-xs text-slate-500 dark:text-slate-300">
+          <div class="flex items-start gap-2">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500"></span>
+            Architected event-driven logistics platforms on Azure AKS - Kafka, Redis &amp; Service Bus across 50K+ daily operations
           </div>
-          <div class="flex items-center gap-2">
-            <span class="h-2 w-2 rounded-full bg-secondary-500"></span>
-            $500K annual savings and 10x traffic-ready API architecture
+          <div class="flex items-start gap-2">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary-500"></span>
+            Designed TMS integration layer connecting 4 freight systems via Kafka and custom ETL pipelines, eliminating 150+ manual data transfer hours weekly
           </div>
-          <div class="flex items-center gap-2">
-            <span class="h-2 w-2 rounded-full bg-brand-500"></span>
-            60% lower P95 latency and 85% less manual intervention
+          <div class="flex items-start gap-2">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"></span>
+            55% API response improvement and 5x traffic growth sustained at 99.9% availability
           </div>
           <p class="inline-flex w-fit items-center gap-2 rounded-full border border-secondary-200/70 bg-secondary-50/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-secondary-700 shadow-sm dark:border-secondary-900/60 dark:bg-secondary-900/20 dark:text-secondary-200">
             Open to Software Engineer opportunities

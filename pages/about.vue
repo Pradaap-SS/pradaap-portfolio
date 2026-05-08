@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { aboutParagraphs, education, experience, profile, skillsByCategory } from '~/data/profile'
+import { aboutParagraphs, certifications, education, experience, profile, skillsByCategory } from '~/data/profile'
 
 useSeoMeta({
   title: 'About',
@@ -51,6 +51,36 @@ useSeoMeta({
       </aside>
     </section>
 
+    <section class="space-y-6">
+      <SectionTitle title="Certifications" subtitle="" />
+      <div class="flex flex-col gap-4">
+        <a
+          v-for="cert in certifications"
+          :key="cert.name"
+          :href="cert.credentialUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card group flex items-center gap-5 transition-all duration-200 hover:shadow-lg"
+        >
+          <img
+            :src="`/images/certifications/aws-certified-solutions-architect-associate.png`"
+            alt="AWS Certified Solutions Architect Associate badge"
+            class="h-16 w-16 shrink-0 object-contain"
+          />
+          <div class="min-w-0 flex-1">
+            <p class="font-semibold text-slate-900 group-hover:text-brand-700 dark:text-slate-100 dark:group-hover:text-brand-300 transition-colors duration-200">
+              {{ cert.name }}
+            </p>
+            <p class="mt-0.5 text-sm text-slate-500 dark:text-slate-400">{{ cert.issuer }}</p>
+            <p class="mt-1 text-xs text-slate-400 dark:text-slate-500">Issued {{ cert.issued }} · Expires {{ cert.expires }}</p>
+          </div>
+          <span class="shrink-0 text-xs font-medium text-brand-600 dark:text-brand-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            View credential →
+          </span>
+        </a>
+      </div>
+    </section>
+
     <section class="space-y-8">
       <SectionTitle
         title="Skills"
@@ -80,13 +110,13 @@ useSeoMeta({
             </div>
             <span class="chip">{{ item.period }}</span>
           </div>
-          <!-- <p class="text-slate-600 dark:text-slate-300">{{ item.summary }}</p> -->
-          <!-- <ul class="space-y-3 text-slate-700 dark:text-slate-200">
+          <p class="text-slate-600 dark:text-slate-300">{{ item.summary }}</p>
+          <ul class="space-y-3 text-slate-700 dark:text-slate-200">
             <li v-for="bullet in item.bullets" :key="bullet" class="flex gap-2">
               <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"></span>
               <span>{{ bullet }}</span>
             </li>
-          </ul> -->
+          </ul>
         </article>
       </div>
     </section>
@@ -98,9 +128,13 @@ useSeoMeta({
       />
       <div class="grid gap-4">
         <article v-for="item in education" :key="item.degree" class="card space-y-1">
-          <h3 class="font-display text-xl font-semibold">{{ item.degree }}</h3>
-          <p class="text-sm text-brand-600">{{ item.institution }}</p>
-          <!-- <p class="text-sm text-slate-500 dark:text-slate-400">{{ item.location }}</p> -->
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h3 class="font-display text-xl font-semibold">{{ item.degree }}</h3>
+              <p class="text-sm text-brand-600">{{ item.institution }}</p>
+            </div>
+            <span class="chip">{{ item.period }}</span>
+          </div>
         </article>
       </div>
     </section>

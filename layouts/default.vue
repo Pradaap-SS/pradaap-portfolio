@@ -12,7 +12,7 @@
 
     <div class="relative z-10 flex min-h-screen flex-col">
       <NavBar />
-      <main class="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-12 sm:px-6 lg:px-8">
+      <main class="mx-auto w-full max-w-[2000px] flex-1 px-4 pb-16 pt-32 sm:px-6 lg:px-10 xl:px-14 2xl:px-20">
         <slot />
       </main>
       <Footer />
