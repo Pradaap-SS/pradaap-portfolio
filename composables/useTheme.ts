@@ -21,7 +21,7 @@ export const useTheme = () => {
     if (!process.client || initialized.value) return
     const saved = localStorage.getItem('theme') as ThemeMode | null
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    theme.value = saved ?? (prefersDark ? 'dark' : 'light')
+    theme.value = saved ?? 'dark'
     applyTheme(theme.value)
     initialized.value = true
   }

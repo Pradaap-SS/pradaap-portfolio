@@ -22,29 +22,29 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'ai-customer-support-copilot',
-    title: 'AI Customer Support Copilot',
+    slug: 'event-driven-order-system',
+    title: 'OrderFlow — Event-Driven Order System',
     description:
-      'Human-in-the-loop support copilot that turns raw customer tickets into AI-assisted triage, retrieval-backed drafting, and agent-reviewed responses.',
+      'A learning project exploring how event-driven order pipelines actually work.',
     longDescription:
-      'AI Customer Support Copilot is a product-style demo built around how modern support teams actually work: durable intake first, then AI classification, routing, knowledge retrieval, and draft generation, with a human agent reviewing the final response before it is sent. The experience is intentionally shaped like an operator dashboard instead of a chatbot so the workflow emphasizes trust, auditability, and human accountability.',
-    techStack: ['Human-in-the-Loop AI', 'Support Workflow', 'Dashboard UI', 'Vercel'],
+      'OrderFlow is a personal project built to get hands-on with distributed systems patterns. It models an order processing pipeline across five domain services — Validation, Inventory, Payment, Notification, and Compensation — connected through an in-memory event bus that mirrors Kafka pub-sub semantics. The focus is on failure handling: what happens when payment fails after inventory is already reserved, how idempotency keys prevent double-processing under retries, and how dead-letter queues surface poison messages for manual replay. A Failure Lab lets you inject faults at runtime to observe how the system responds.',
+    techStack: ['Next.js', 'TypeScript', 'CQRS', 'Saga Pattern', 'Event Sourcing', 'DLQ', 'Vercel'],
     role: 'Personal Project',
     period: '2026',
-    githubUrl: 'https://github.com/Pradaap-SS/AI-Customer-Support-Copilot',
-    liveUrl: 'https://ai-support-frontend-five.vercel.app/',
-    image: '/images/projects/ai-support-copilot-cover.png',
+    githubUrl: 'https://github.com/Pradaap-SS/Event-Driven-Order-System',
+    liveUrl: 'https://event-driven-order-system.vercel.app/architecture',
+    image: '/images/projects/order-event-cover.png',
     details: {
       problem:
-        'Support teams need faster triage and drafting, but fully autonomous customer replies can reduce trust when agents cannot validate the reasoning, evidence, or final tone.',
+        'The interesting problems in event-driven systems are the failure cases - partial failures mid-saga, duplicate events from retries, poison messages that block a consumer, and keeping read and write models in sync. This project was built to work through those problems concretely.',
       solution:
-        'Designed a copilot workflow that preserves the original customer signal, enriches each ticket with AI-driven classification and routing, retrieves supporting knowledge, and presents an editable draft for human review before sending.',
+        'Each service publishes and subscribes to typed events through a shared event bus with built-in retry logic. When payment fails after inventory is already reserved, a compensation event is published automatically to roll back the reservation. Idempotency keys prevent the same order from being processed twice under retries. After three failed attempts, an event moves to a dead-letter queue and can be replayed manually. The read model is kept separate from the write model and rebuilt from the event log after each step.',
       architecture:
-        'Split-panel product experience with customer intake on one side and an agent queue on the other, backed by a staged pipeline for ticket ingestion, LLM classification, priority routing, retrieval-backed drafting, and final human approval.',
+        'Next.js app with API routes acting as the backend. An in-memory event bus (attached to the Node.js global to survive hot reloads) handles publish, subscribe, retry with exponential backoff, and DLQ routing. Five domain modules — Validation, Inventory, Payment, Notification, Compensation — are each isolated and would map to separate services in a real deployment. Correlation IDs flow through every event so the full order trace is visible in the dashboard. A Failure Lab page lets you adjust failure rates and inject delays at runtime to test how the system behaves.',
       responsibilities: [],
       screenshots: [
-        '/images/projects/ai-support-copilot-cover.png',
-        '/images/projects/ai-support-copilot-workflow.png'
+        '/images/projects/order-event-cover.png',
+        '/images/projects/order-event-screenshot.png'
       ]
     }
   },
@@ -97,6 +97,33 @@ export const projects: Project[] = [
         'Deployed as a Vercel-hosted web application with a lightweight, user-focused summarization workflow.',
       responsibilities: [],
       screenshots: ['/images/projects/summaraize-cover.png', '/images/projects/Summarize-screenshot.png']
+    }
+  },
+  {
+    slug: 'ai-customer-support-copilot',
+    title: 'AI Customer Support Copilot',
+    description:
+      'Human-in-the-loop support copilot that turns raw customer tickets into AI-assisted triage, retrieval-backed drafting, and agent-reviewed responses.',
+    longDescription:
+      'AI Customer Support Copilot is a product-style demo built around how modern support teams actually work: durable intake first, then AI classification, routing, knowledge retrieval, and draft generation, with a human agent reviewing the final response before it is sent. The experience is intentionally shaped like an operator dashboard instead of a chatbot so the workflow emphasizes trust, auditability, and human accountability.',
+    techStack: ['Human-in-the-Loop AI', 'Support Workflow', 'Dashboard UI', 'Vercel'],
+    role: 'Personal Project',
+    period: '2026',
+    githubUrl: 'https://github.com/Pradaap-SS/AI-Customer-Support-Copilot',
+    liveUrl: 'https://ai-support-frontend-five.vercel.app/',
+    image: '/images/projects/ai-support-copilot-cover.png',
+    details: {
+      problem:
+        'Support teams need faster triage and drafting, but fully autonomous customer replies can reduce trust when agents cannot validate the reasoning, evidence, or final tone.',
+      solution:
+        'Designed a copilot workflow that preserves the original customer signal, enriches each ticket with AI-driven classification and routing, retrieves supporting knowledge, and presents an editable draft for human review before sending.',
+      architecture:
+        'Split-panel product experience with customer intake on one side and an agent queue on the other, backed by a staged pipeline for ticket ingestion, LLM classification, priority routing, retrieval-backed drafting, and final human approval.',
+      responsibilities: [],
+      screenshots: [
+        '/images/projects/ai-support-copilot-cover.png',
+        '/images/projects/ai-support-copilot-workflow.png'
+      ]
     }
   },
   {
