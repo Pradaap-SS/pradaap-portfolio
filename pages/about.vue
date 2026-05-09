@@ -10,42 +10,51 @@ useSeoMeta({
 
 <template>
   <div class="space-y-16">
-    <section class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+    <section class="grid gap-10 lg:grid-cols-[2fr_1fr] lg:items-start">
       <div class="space-y-6">
         <SectionTitle
           title="About"
           subtitle=""
         />
-        <div class="section-content-width space-y-5 text-slate-600 dark:text-slate-300">
+        <div class="space-y-5 text-slate-600 dark:text-slate-300">
           <p v-for="paragraph in aboutParagraphs" :key="paragraph">{{ paragraph }}</p>
         </div>
-        <div class="flex flex-wrap items-center gap-3">
-          <a href="/Pradaap_Shobha_resume.pdf" class="btn-secondary" download>
-            Download CV
-          </a>
-          <a :href="profile.linkedin" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            LinkedIn
-          </a>
-        </div>
       </div>
-      <aside class="mx-auto w-full max-w-sm lg:sticky lg:top-24">
-        <div class="card flex flex-col items-center gap-5 text-center">
-          <div class="rounded-full border border-slate-200/80 bg-white p-1.5 shadow-sm dark:border-slate-800/80 dark:bg-slate-900">
+      <aside class="mx-auto w-full max-w-xs lg:sticky lg:top-24">
+        <div class="card flex flex-col items-center gap-4 p-5 text-center">
+          <div class="rounded-full border border-slate-200/80 bg-white p-1 shadow-sm dark:border-slate-800/80 dark:bg-slate-900">
             <img
               :src="profile.photo.src"
               :alt="profile.photo.alt"
-              class="h-44 w-44 rounded-full object-cover sm:h-52 sm:w-52"
-              width="416"
-              height="416"
+              class="h-32 w-32 rounded-full object-cover sm:h-36 sm:w-36"
+              width="288"
+              height="288"
               loading="lazy"
               decoding="async"
-              sizes="(max-width: 640px) 176px, 208px"
             />
           </div>
-          <p class="font-display text-xl font-semibold text-slate-900 dark:text-slate-100">{{ profile.preferredName }}</p>
-          <p class="text-sm text-slate-600 dark:text-slate-300">{{ profile.role }}</p>
-          <div class="flex flex-wrap justify-center gap-2 text-xs">
-            <span class="chip">{{ profile.location }}</span>
+          <div class="space-y-1">
+            <p class="font-display text-lg font-semibold text-slate-900 dark:text-slate-100">{{ profile.preferredName }}</p>
+            <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">{{ profile.role }}</p>
+          </div>
+          <div class="flex w-full flex-col gap-2 border-t border-slate-200/60 pt-3 dark:border-slate-700/60">
+            <a
+              :href="`mailto:${profile.email}`"
+              class="btn-secondary w-full justify-center truncate py-2 text-xs"
+            >
+              {{ profile.email }}
+            </a>
+            <a
+              :href="profile.linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary w-full justify-center py-2 text-xs"
+            >
+              LinkedIn →
+            </a>
+            <a href="/Pradaap_Shobha_resume.pdf" class="btn-secondary w-full justify-center py-2 text-xs" download>
+              Download Resume
+            </a>
           </div>
         </div>
       </aside>
